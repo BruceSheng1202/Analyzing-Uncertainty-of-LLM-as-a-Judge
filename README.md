@@ -2,43 +2,41 @@
 
 ## 🚀 Project Overview
 
-This repository contains code, data, and experiments for analyzing and comparing conformal prediction methods to quantify the uncertainty of large language models acting as "judges" on rating-based tasks. We implement and evaluate Boosted CP, CHR, CQR, LVD, Ordinal APS/RC, and R2CCP across multiple datasets.
+This repository contains code, data, and experiments for analyzing and comparing conformal prediction methods to quantify the uncertainty of large language models acting as “judges” on rating-based tasks. We implement and evaluate Boosted CP, CHR, CQR, LVD, Ordinal APS/RC, and R2CCP across multiple datasets.
 
 ## 📁 Repository Structure
 
+All files and data live at the root of this repository:
+
 ```text
 .
-├── Analysis/                      # Uncertainty analysis notebooks, data, and results
-│   ├── boosted-conformal/         # Boosted CP method scripts and outputs
-│   ├── calsize/                   # Calibration-size experiments and data
-│   ├── chr/                       # CHR method scripts and outputs
-│   ├── data_results/              # Processed data result files
-│   ├── human_performance/         # Human baseline performance data
-│   ├── interval_results/          # Generated interval results
-│   ├── judge/                     # Judge prompt and output files
-│   ├── LVD/                       # LVD method scripts and outputs
-│   ├── midpoints/                 # Midpoint-based evaluation comparisons
-│   ├── model_logits/              # Raw model logits
-│   ├── model_paths/               # Model checkpoint paths
-│   ├── raw_scores/                # Raw prediction scores
-│   ├── reprompt/                  # Reprompt experiment notebooks and data
-│   ├── BoostedCP_random.ipynb
-│   ├── CHR_random.ipynb
-│   ├── CQR_random.ipynb
-│   ├── LVD_random.ipynb
-│   ├── OrdinalAPS_random.ipynb
-│   ├── OrdinalRC_random.ipynb
-│   ├── R2CCP_random.ipynb
-│   ├── R2CCP_calsize.ipynb
-│   ├── calsize_plot.ipynb
-│   ├── heteroskedasticity_ht.ipynb
-│   ├── plot_instances.ipynb
-│   ├── score_performance.ipynb
-│   ├── R2CCP-0.0.8-py3-none-any.whl
-│   └── README                      # Analysis-specific README
-├── midpoints/                     # Midpoint comparison scripts and results
-├── reprompt/                      # Reprompt experiment notebooks and data
-└── README.md                      # Project overview and instructions
+├── boosted-conformal/         # Boosted CP method scripts and outputs
+├── calsize/                   # Calibration-size experiments and data
+├── chr/                       # CHR method scripts and outputs
+├── data_results/              # Processed data result files
+├── human_performance/         # Human baseline performance data
+├── interval_results/          # Generated interval results
+├── judge/                     # Judge prompt and output logs
+├── LVD/                       # LVD method scripts and outputs
+├── midpoints/                 # Midpoint comparison experiments
+├── model_logits/              # Raw model logits
+├── model_paths/               # Model checkpoint paths
+├── raw_scores/                # Raw prediction scores
+├── reprompt/                  # Reprompt experiment notebooks and data
+├── BoostedCP_random.ipynb     # Boosted CP random-split notebook
+├── CHR_random.ipynb           # CHR random-split notebook
+├── CQR_random.ipynb           # CQR random-split notebook
+├── LVD_random.ipynb           # LVD random-split notebook
+├── OrdinalAPS_random.ipynb    # Ordinal APS random-split notebook
+├── OrdinalRC_random.ipynb     # Ordinal RC random-split notebook
+├── R2CCP_random.ipynb         # R2CCP random-split notebook
+├── R2CCP_calsize.ipynb        # R2CCP calibration-size notebook
+├── calsize_plot.ipynb         # Calibration-size plotting notebook
+├── heteroskedasticity_ht.ipynb# Heteroskedasticity testing notebook
+├── plot_instances.ipynb       # Instance-level result plotting notebook
+├── score_performance.ipynb    # Aggregated score performance notebook
+├── R2CCP-0.0.8-py3-none-any.whl# R2CCP wheel for local install
+└── README.md                  # Project overview and instructions
 ```
 
 ## ⚙️ Requirements & Installation
@@ -50,7 +48,7 @@ This repository contains code, data, and experiments for analyzing and comparing
    cd <repo>
    ```
 
-2. **Create virtual environment**
+2. **Create and activate a Python virtual environment**
 
    ```bash
    python3 -m venv venv
@@ -64,25 +62,25 @@ This repository contains code, data, and experiments for analyzing and comparing
    pip install numpy pandas scipy scikit-learn matplotlib jupyterlab statsmodels
    ```
 
-4. **(Optional) Install R2CCP**
+4. **Install R2CCP (optional)**
 
    ```bash
-   pip install ./Analysis/R2CCP-0.0.8-py3-none-any.whl
+   pip install ./R2CCP-0.0.8-py3-none-any.whl
    ```
 
-## 📝 Reproduce Experiments
+## 📝 How to Reproduce Experiments
 
-* **Calibration-size**: `Analysis/R2CCP_calsize.ipynb`, `Analysis/calsize_plot.ipynb`
-* **Random splits**: Run `*_random.ipynb` notebooks under `Analysis/`
-* **Heteroskedasticity tests**: `Analysis/heteroskedasticity_ht.ipynb`
-* **Midpoint evaluations**: See files under `Analysis/midpoints/` and top-level `midpoints/`
-* **Reprompt experiments**: Notebooks under `Analysis/reprompt/` and top-level `reprompt/`
+* **Calibration-size analysis**: Run `R2CCP_calsize.ipynb` and `calsize_plot.ipynb`.
+* **Random-split evaluations**: Execute each `*_random.ipynb` notebook.
+* **Heteroskedasticity testing**: Open `heteroskedasticity_ht.ipynb`.
+* **Midpoint comparisons**: Check the `midpoints/` directory.
+* **Reprompt experiments**: Review the `reprompt/` directory.
 
 ## 🤝 Contributing
 
-1. Fork → Branch → Commit → PR
-2. Follow PEP 8 and document new modules
+1. Fork the repo → create a branch → commit → open a PR.
+2. Follow PEP 8 for Python code and document any new modules or notebooks.
 
 ## 📜 License
 
-MIT License. See [LICENSE](LICENSE).
+This project is released under the MIT License. See [LICENSE](LICENSE) for details.
