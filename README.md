@@ -1,10 +1,10 @@
 # LLM Judge Uncertainty Analysis
 
-## 🚀 Project Overview
+## Project Overview
 
 This repository contains code, data, and experiments for analyzing and comparing conformal prediction methods to quantify the uncertainty of large language models acting as “judges” on rating-based tasks. We implement and evaluate Boosted CP, CHR, CQR, LVD, Ordinal APS/RC, and R2CCP across multiple datasets.
 
-## 📁 Repository Structure
+## Repository Structure
 
 All files and data live at the root of this repository:
 
