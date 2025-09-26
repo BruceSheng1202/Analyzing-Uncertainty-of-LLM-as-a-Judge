@@ -2,7 +2,10 @@
 
 ## Project Overview
 
-This repository is the old version of code repository for my paper "[Analyzing Uncertainty of LLM-as-a-Judge: Interval Evaluations with Conformal Prediction](https://arxiv.org/abs/2509.18658)" and please to see [new version in another repository](https://github.com/BruceSheng1202/Analyzing_Uncertainty_of_LLM-as-a-Judge). This repository contains code, data, and experiments for analyzing and comparing conformal prediction methods to quantify the uncertainty of large language models acting as “judges” on rating-based tasks. We implement and evaluate Boosted CP, CHR, CQR, LVD, Ordinal APS/RC, and R2CCP across multiple datasets.
+This repository is the old version of code repository for my paper "[Analyzing Uncertainty of LLM-as-a-Judge: Interval Evaluations with Conformal Prediction](https://arxiv.org/abs/2509.18658)" and please to see [new version in another repository](https://github.com/BruceSheng1202/Analyzing_Uncertainty_of_LLM-as-a-Judge). 
+
+
+This repository contains code, data, and experiments for analyzing and comparing conformal prediction methods to quantify the uncertainty of large language models acting as “judges” on rating-based tasks. We implement and evaluate Boosted CP, CHR, CQR, LVD, Ordinal APS/RC, and R2CCP across multiple datasets.
 
 ## Repository Structure
 
